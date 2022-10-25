@@ -1,0 +1,53 @@
+1. Rapid7 - Raw Data UAT - (Data engeering + Vis + Approval)
+2. Rapid7 - ETL Unit - (DE)
+3. Rapid7 - ETL view UAT - (Vis + DE + Approval by Lauren)
+
+
+
+Rapid7 -> Raw Data Ingestion by Sec Sci -> 
+
+memories-bucket-99897 
+
+resource "google_compute_instance" "vm_instance" {
+  name         = "terraform-instance"
+  machine_type = "f1-micro"
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-11"
+    }
+  }
+  network_interface {
+    network = google_compute_network.vpc_network.name
+    access_config {
+    }
+  }
+}
+
+
+terraform plan -out static_ip
+terraform apply "static_ip"
+
+
+cd ~
+touch main.tf
+mkdir -p modules/gcs-static-website-bucket
+Copied!
+Navigate to the module directory and run the following commands to create three empty files:
+
+cd modules/gcs-static-website-bucket
+touch website.tf variables.tf outputs.tf
+
+Inside the gcs-static-website-bucket directory, create a file called README.md with the following content:
+
+# GCS static website bucket
+This module provisions Cloud Storage buckets configured for static website hosting.
+
+
+
+
+('e2a778b1-0eb9-49e6-b322-ef357c53d30a-default-asset-3910411',
+'e2a778b1-0eb9-49e6-b322-ef357c53d30a-default-asset-4973516',
+'e2a778b1-0eb9-49e6-b322-ef357c53d30a-default-asset-4975037',
+'e2a778b1-0eb9-49e6-b322-ef357c53d30a-default-asset-4984493',
+'e2a778b1-0eb9-49e6-b322-ef357c53d30a-default-asset-5010254')
+
