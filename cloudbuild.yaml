@@ -11,6 +11,7 @@ steps:
   - --runtime=python310
   - --allow-unauthenticated
   - --run-service-account=my-test-project-351918@appspot.gserviceaccount.com
+  - --region=us-central1
 logsBucket: 'gs://build_storage'
 options:
   logging: GCS_ONLY
