@@ -9,5 +9,6 @@ steps:
   - --trigger-http
   - --runtime=Python310 
   - --allow-unauthenticated
+logsBucket: 'gs://build_storage'
 options:
-  logging: NONE
+  logging: GCS_ONLY
