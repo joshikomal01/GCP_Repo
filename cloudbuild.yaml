@@ -9,3 +9,5 @@ steps:
   - --trigger-http
   - --runtime=Python310 
   - --allow-unauthenticated
+options:
+  logging: NONE
