@@ -7,7 +7,7 @@ steps:
   - hello_world
   - --source=.
   - --trigger-http
-  - --runtime=Python310 
+  - --runtime=python310
   - --allow-unauthenticated
 logsBucket: 'gs://build_storage'
 options:
