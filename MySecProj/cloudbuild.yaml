@@ -1,0 +1,19 @@
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - py-cloud-2
+  - --gen2
+  - --source=./MySecProj/
+  - --trigger-http
+  - --runtime=python310
+  - --entry-point=hello_get
+  - --run-service-account=my-test-project-351918@appspot.gserviceaccount.com
+  - --region=us-central1
+  - --memory=1G
+  - --timeout=3600
+logsBucket: 'gs://build_storage'
+options:
+  logging: GCS_ONLY
