@@ -1,4 +1,4 @@
-def hello-get(request):
+def hello_get(request):
     """Responds to any HTTP request.
     Args:
         request (flask.Request): HTTP request object.
