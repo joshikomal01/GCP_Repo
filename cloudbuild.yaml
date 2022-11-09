@@ -4,12 +4,12 @@ steps:
   - gcloud
   - functions
   - deploy
-  - helloworld
+  - py-cloud-trigger
   - --gen2
   - --source=.
   - --trigger-http
   - --runtime=python310
-  - --allow-unauthenticated
+  - --entry-point=hello_get
   - --run-service-account=my-test-project-351918@appspot.gserviceaccount.com
   - --region=us-central1
 logsBucket: 'gs://build_storage'
