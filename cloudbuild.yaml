@@ -5,6 +5,7 @@ steps:
   - functions
   - deploy
   - hello_world
+  - --gen2
   - --source=.
   - --trigger-http
   - --runtime=python310
