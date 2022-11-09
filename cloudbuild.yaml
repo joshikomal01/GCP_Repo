@@ -12,7 +12,7 @@ steps:
   - --entry-point=hello_get
   - --run-service-account=my-test-project-351918@appspot.gserviceaccount.com
   - --region=us-central1
-  - --memory-allocated=1gib
+  - --memory=1gib
   - --timeout=3600
 logsBucket: 'gs://build_storage'
 options:
