@@ -4,7 +4,7 @@ steps:
   - gcloud
   - functions
   - deploy
-  - hello_world
+  - hello_http
   - --gen2
   - --source=.
   - --trigger-http
